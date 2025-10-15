@@ -1,0 +1,14 @@
+/out/
+src/java/Resources/currentIP.txt
+.vscode/launch.json
+.vscode/settings.json
+userObject.ser
+/lib/javafx-sdk-21.0.2/
+logs/graphhopper.log
+.DS_Store
+.idea/
+src/java/Database/credentials.txt
+src/java/Database/credentialsLocal.txt
+src/java/Database/credentialsOld.txt
+shapes.csv
+maas_stops_time.csv

@@ -1,0 +1,3 @@
+Log file created at: 2024-06-14 16:27:59
+Credentials decrypted at: 2024-06-14 16:27:59
+Error: No suitable driver found for jdbc:mysql://mysql-gtfs-gtfs-project.b.aivencloud.com:11327/gtfs at: 2024-06-14 16:27:59
