@@ -4,7 +4,10 @@
 
 ## Overview
 
-A semester project developed at Maastricht University that provides intelligent bus route scheduling for the Maastricht public transit system. Built with **JavaFX** and powered by the **A\* pathfinding algorithm**, the application achieves **90% accuracy** when compared to Google Maps real-time bus data.
+A semester project developed at Maastricht University that provides detailed bus route scheduling for the Maastricht public transit system. Built with **JavaFX** and **GoogleMap API**, powered by the **A\* pathfinding algorithm**, the application achieves **90% accuracy** when compared to Google Maps real-time bus data.
+
+<img width="1192" height="665" alt="Screenshot 2025-10-15 at 21 39 19" src="https://github.com/user-attachments/assets/59e05b90-fcca-40d0-b400-f528d6d4290d" />
+
 
 ## Quick Start
 
