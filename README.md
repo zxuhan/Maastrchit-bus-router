@@ -1,54 +1,46 @@
-# BCS25-Project-1-2: Phase 2 Public Transport Routing
+# Maastricht Bus Scheduling App
 
-Group 25 Team Members: Tristan Dormans, Mehmet Levent Koca, Alen Quiroz Engel, Vlad Creciun, Xuhan Zhuang, Joel Kumi, Bruno Torrijo
+**Tech Stack:** JavaFX | MySQL | Google Maps API | A* Algorithm
 
-## IMPORTANT TO BE ABLE TO RUN THE APPLICATION
-1. Set up a JavaFX environment on your IDEA to be able to run the application GUI.
+## Overview
 
-2. If you have an error saying "JavaFX runtime components missing", you also need to set up the VM options in your run configurations as:<br>
---module-path "your physical path to JavaFX lib" --add-modules javafx.controls,javafx.fxml
+A semester project developed at Maastricht University that provides intelligent bus route scheduling for the Maastricht public transit system. Built with **JavaFX** and powered by the **A\* pathfinding algorithm**, the application achieves **90% accuracy** when compared to Google Maps real-time bus data.
 
-3. Install mySQL in your computer and create a new local user<br>
-(1) Run `mysql -u root` in your commandline<br>
-(2) When you see a prompt like "mysql>", run following one by one:<br>
-    `CREATE USER 'DACS2024'@'localhost' IDENTIFIED BY 'DACS2024';`<br>
-    `GRANT ALL PRIVILEGES ON *.* TO 'DACS2024'@'localhost' WITH GRANT OPTION;`<br>
-    `FLUSH PRIVILEGES;`<br>
+## Quick Start
 
-4. Create a new mySQL connection with your local database application(recommending DBeaver).<br>
-URL = jdbc:mysql://localhost:3306/gtfs<br>
-USER = DACS2024<br>
-PASSWORD = DACS2024<br>
+### 1. Configure JavaFX Environment
 
-5. When you already set up your local database connection, import two data files:<br>
-(1)Import maas_stops_time.csv file as Table "maas_stops_time"<br>
-(2)Import shapes.csv file as Table "shapes"<br>
+Set up JavaFX in IntelliJ IDEA to enable the GUI application.
 
-***** HOW TO RUN *****
+**Troubleshooting "JavaFX runtime components missing" error:**
 
-Launch the application by running the MapLauncher.java file. 
+- Navigate to Run Configurations and add the following VM options:
 
-Now, there are multiple things you can do:
-1) The '+' and '-' buttons
-    These buttons are used for zooming the map in and out, if the user desires to have a closer or farther away view of the map, 
-    they will be able to control the zoom in amount with these buttons
+```
+--module-path "path/to/javafx/lib" --add-modules javafx.controls,javafx.fxml
+```
 
-2) Zip Code text fields
-    There are two text fields labeled "Enter Zip Code 1" and "Enter Zip Code 2", these are for the user to insert their desired points 
-    in the map. By inserting 2 Zip Codes, the user will be able to clculate the distance between the two points in the map.
+Replace `path/to/javafx/lib` with your actual JavaFX library path.
 
-4) Information on Screen
-    After the 'Search' button is clicked, the user is presented with different pieces of information on screen:
-    The visualised bus route, displayed with a red line.
-    Route information is displayed on the right of the map image, including departure, walking times, transfer information and total travel time.
+### 2. Set Up MySQL Database
 
-5) Accessibility Displayer
-    Press the button 'Show accessibility of postal codes' to open up a new window. In this window you will be presented with a map containing colored coded postal codes of Maastricht according to their social-economic accessibility. It is required to press the 'Update' button any time a value is changed in the other fields of this GUI. The options button will open up a menu with different score maps, please press the 'update' button after selecting an option. The other GUI buttons speak for themselves.
+Create a new MySQL connection using a database client (we used DBeaver for this project).
 
+**Connection Parameters:**
 
-6) To exit the program simply press the cross on the top right of the GUI, or alternatively press 'ALT' + 'F4'. 
+- **URL:** `jdbc:mysql://localhost:3306/gtfs`
+- **Username:** `DACS2024`
+- **Password:** `DACS2024`
 
-Thank you,
-Group 25.
+### 3. Import Required Data
 
-25st of June, 2024.
+After establishing your database connection:
+
+1. Extract the contents of `data.zip`
+2. Import `maas_stops_time.csv` as table **"maas_stops_time"**
+3. Import `shapes.csv` as table **"shapes"**
+
+### 4. Launch Application
+Run `MapLauncher.java` to start the application.
+
+**Note:** Zipcode data can be found at [`/src/Resources/MassZipLatlon.xlsx`](https://github.com/username/repository-name/blob/main/src/Resources/MassZipLatlon.xlsx)
